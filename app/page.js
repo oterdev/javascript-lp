@@ -10,22 +10,30 @@ import AuthorInfo from "@/components/ebook/AuthorInfo";
 import FinalCTA from "@/components/ebook/FinalCTA";
 import DiscountSection from "@/components/ebook/DiscountSection";
 import Footer from "@/components/ebook/Footer";
+import Script from "next/script";
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-yellow-50">
-      <Header />
-      <HeroSection />
-      <ProblemSection />
-      <TableOfContents />
-      <FeaturesList />
-      <SampleForm />
-      <AudienceSection />
-      <Testimonials />
-      <FinalCTA />
-      <AuthorInfo />
-      <DiscountSection />
-      <Footer />
-    </div>
+    <>
+      <Script
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id="5133a60d-a411-4c85-8f3f-f56d17c88d2c"
+      />
+      <div className="flex flex-col min-h-screen bg-yellow-50">
+        <Header />
+        <HeroSection />
+        <ProblemSection />
+        <TableOfContents />
+        <FeaturesList />
+        <SampleForm />
+        <AudienceSection />
+        <Testimonials />
+        <FinalCTA />
+        <AuthorInfo />
+        <DiscountSection />
+        <Footer />
+      </div>
+    </>
   );
 }

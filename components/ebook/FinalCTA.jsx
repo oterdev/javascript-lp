@@ -18,6 +18,8 @@ export default function FinalCTA() {
           <Link
             href="https://dub.sh/buy-js-ebook"
             className="bg-yellow-300 text-[#343434] hover:bg-yellow-400 font-medium text-lg px-8 py-3 rounded-md"
+            id="beli-sekarang"
+            data-umami-event="Beli sekarang"
           >
             Beli Sekarang
           </Link>

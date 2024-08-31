@@ -1,10 +1,11 @@
 "use client";
 
+import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -14,9 +15,14 @@ export default function SampleForm() {
   const [email, setEmail] = useState("");
 
   const sendEmail = (template) => {
-    return emailjs.sendForm("service_ywq3648", template, form.current, {
-      publicKey: "Iz_ZTYcxSEZtuyjaR",
-    });
+    return emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      template,
+      form.current,
+      {
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      }
+    );
   };
 
   const handleSubmit = (e) => {
@@ -36,7 +42,7 @@ export default function SampleForm() {
         toast.success("Email terkirim!");
       })
       .catch((error) => {
-        console.log("FAILED...", error.message);
+        console.log("FAILED...", error);
       })
       .finally(() => {
         setName("");
@@ -81,7 +87,11 @@ export default function SampleForm() {
                   name="email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <Button className="bg-[#343434] text-white hover:bg-[#202020]">
+                <Button
+                  className="bg-[#343434] text-white hover:bg-[#202020]"
+                  id="kirim-sample"
+                  data-umami-event="Kirim sample"
+                >
                   Kirim Sample
                 </Button>
               </form>

@@ -139,8 +139,10 @@ export default function DiscountSection() {
               <Button
                 className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white text-lg"
                 onClick={handleClick}
+                id="dapet-diskon"
+                data-umami-event="Dapet diskon"
               >
-                Beli Sekarang dan Hemat 40%
+                Beli Sekarang dan Hemat 60%
               </Button>
             </div>
           </section>
