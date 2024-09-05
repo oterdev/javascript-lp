@@ -8,6 +8,12 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { MagicCard } from "@/components/magicui/magic-card";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 import { cn } from "@/lib/utils";
 
@@ -93,29 +99,28 @@ export default function DiscountSection() {
     <>
       <div className="relative overflow-hidden">
         <MagicCard
-          className="flex-col items-center justify-center bg-yellow-100"
+          className="flex-col items-center justify-center border-0 bg-white"
           gradientColor={theme === "dark" ? "#262626" : "#fef08a"}
         >
-          <section className="py-16 ">
-            <div className="container mx-auto px-4 text-center text-[#343434]">
-              <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-                Penawaran Special! 🎉
+          <section className="py-16">
+            <div className="container mx-auto max-w-screen-lg px-4 text-center text-[#343434]">
+              <h2 className="mb-8 text-3xl font-semibold text-gray-800">
+                Penawaran special! 🎉
               </h2>
-              <div className="flex justify-center mb-8">
+              <div className="mb-6 flex justify-center">
                 <Image
                   src="/promo.png?v=2"
                   alt="Ebook Cover"
                   width={250}
                   height={250}
-                  className="rounded-lg"
                 />
               </div>
-              <div className="mb-8">
+              <div className="mb-6">
                 <p className="text-xl">
-                  <span className="line-through text-gray-500/50 mr-2">
+                  <span className="mr-2 text-gray-500/50 line-through">
                     Rp 199.000
                   </span>
-                  <span className="font-semibold text-2xl text-red-600">
+                  <span className="text-2xl font-semibold text-red-600">
                     Rp 79.000
                   </span>
                 </p>
@@ -123,8 +128,8 @@ export default function DiscountSection() {
                   Hemat 60% untuk waktu yang terbatas!
                 </p>
               </div>
-              <div className="mb-8">
-                <h3 className="text-xl text-gray-600/80 mb-4">
+              <div className="mb-6">
+                <h3 className="mb-2 text-xl text-gray-600/80">
                   Cepat! Penawaran berakhir:
                 </h3>
                 <div className="flex justify-center gap-4">
@@ -136,14 +141,31 @@ export default function DiscountSection() {
                   ))}
                 </div>
               </div>
-              <Button
-                className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white text-lg"
-                onClick={handleClick}
-                id="dapet-diskon"
-                data-umami-event="Dapet diskon"
-              >
-                Beli Sekarang dan Hemat 60%
-              </Button>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <div className="relative inline-flex">
+                      <div
+                        className="inline-flex h-11 items-center justify-center whitespace-nowrap rounded-md bg-yellow-300 px-8 text-sm font-medium text-[#343434] hover:bg-yellow-400"
+                        onClick={handleClick}
+                        id="dapet-diskon"
+                        data-umami-event="Dapet diskon"
+                        size="lg"
+                      >
+                        Ambil Diskonnya
+                      </div>
+                      <div className="absolute right-0 top-0 -mr-1 -mt-1 flex h-3 w-3">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#343434] opacity-75"></span>
+                        <span className="relative inline-flex h-3 w-3 rounded-full bg-[#343434]"></span>
+                      </div>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Ada effect firework saat di pencet tombolnya</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
           </section>
         </MagicCard>
@@ -155,17 +177,7 @@ export default function DiscountSection() {
           cy={1}
           cr={1}
           className={cn(
-            "[mask-image:linear-gradient(to_top_left,black,transparent,transparent)]"
-          )}
-        />
-        <DotPattern
-          width={20}
-          height={20}
-          cx={1}
-          cy={1}
-          cr={1}
-          className={cn(
-            "[mask-image:linear-gradient(to_top_right,black,transparent,transparent)]"
+            "[mask-image:linear-gradient(to_bottom_right,black,transparent)]",
           )}
         />
       </div>

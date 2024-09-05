@@ -3,15 +3,15 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 
 export default function AudienceSection() {
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-semibold text-[#343434] mb-10">
-          Siapa Sih yang Cocok Baca Ini?
+    <section className="py-16">
+      <div className="container mx-auto max-w-screen-lg px-4">
+        <h2 className="mb-10 text-2xl font-semibold text-[#343434]">
+          Siapa sih yang cocok baca ini?
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <Card className="relative overflow-hidden hover:shadow-xl hover:shadow-yellow-200/50">
             <CardContent className="p-6">
-              <h3 className="text-lg font-medium text-[#343434] mb-4">
+              <h3 className="mb-4 text-lg font-medium text-[#343434]">
                 Pemula tanpa latar belakang IT
               </h3>
               <p className="text-[#343434]">
@@ -29,7 +29,7 @@ export default function AudienceSection() {
           </Card>
           <Card className="relative overflow-hidden hover:shadow-xl hover:shadow-yellow-200/50">
             <CardContent className="p-6">
-              <h3 className="text-lg font-medium text-[#343434] mb-4">
+              <h3 className="mb-4 text-lg font-medium text-[#343434]">
                 Mahasiswa IT
               </h3>
               <p className="text-[#343434]">
@@ -41,7 +41,7 @@ export default function AudienceSection() {
           </Card>
           <Card className="relative overflow-hidden hover:shadow-xl hover:shadow-yellow-200/50">
             <CardContent className="p-6">
-              <h3 className="text-lg font-medium text-[#343434] mb-4">
+              <h3 className="mb-4 text-lg font-medium text-[#343434]">
                 Fresh graduate
               </h3>
               <p className="text-[#343434]">
@@ -53,7 +53,7 @@ export default function AudienceSection() {
           </Card>
           <Card className="relative overflow-hidden hover:shadow-xl hover:shadow-yellow-200/50">
             <CardContent className="p-6">
-              <h3 className="text-lg font-medium text-[#343434] mb-4">
+              <h3 className="mb-4 text-lg font-medium text-[#343434]">
                 Karyawan yang mau ganti karir
               </h3>
               <p className="text-[#343434]">

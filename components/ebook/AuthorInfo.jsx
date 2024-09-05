@@ -3,21 +3,21 @@ import Image from "next/image";
 
 export default function AuthorInfo() {
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-6">
+    <section className="py-16">
+      <div className="container mx-auto max-w-screen-lg px-4">
+        <div className="flex flex-col items-center gap-6 md:flex-row">
           <div className="md:w-2/3 md:pl-8">
-            <h2 className="text-2xl font-semibold text-[#343434] mb-10">
-              Siapa Sih Penulisnya?
+            <h2 className="mb-10 text-2xl font-semibold text-[#343434]">
+              Siapa penulisnya?
             </h2>
-            <p className="text-[#343434] mb-4">
+            <p className="mb-4 text-[#343434]">
               👋 Halo! Saya Sarian, seorang full-stack developer dengan
               pengalaman kurang lebih 4 tahun di dunia web development. Saya
               udah ngebantu puluhan perusahaan dan UMKM buat bikin web untuk
               menyelesaikan masalah yang mereka punya. Alhamdulilah sejauh ini
               feedbacknya selalu positif!
             </p>
-            <p className="text-[#343434] mb-4">
+            <p className="mb-4 text-[#343434]">
               Saya bikin ebook ini karena tau gimana sulitnya belajar JavaScript
               dari awal. Saya pengen berbagi pengalaman dan pengetahuan biar
               kamu semua bisa jadi programmer pro tanpa harus pusing-pusing
@@ -63,7 +63,7 @@ export default function AuthorInfo() {
               alt="Author"
               width={200}
               height={200}
-              className="rounded-full mx-auto"
+              className="mx-auto rounded-full"
             />
           </div>
         </div>

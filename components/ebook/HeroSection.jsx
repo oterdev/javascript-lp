@@ -3,65 +3,72 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { Star, StarHalf } from "lucide-react";
 
-import { cn } from "@/lib/utils";
-import DotPattern from "@/components/magicui/dot-pattern";
+import { Button } from "@/components/ui/button";
 import Particles from "@/components/magicui/particles";
 
 export default function HeroSection() {
   const { theme } = useTheme();
-  const [color, setColor] = useState("#ffffff");
+  const [color, setColor] = useState("#fff");
 
   useEffect(() => {
-    setColor(theme === "dark" ? "#ffffff" : "#000000");
+    setColor(theme === "dark" ? "#fff" : "#fff");
   }, [theme]);
 
   return (
     <>
       <div className="relative overflow-hidden">
-        <section className="bg-gradient-to-b from-yellow-300 to-yellow-400 py-10">
-          <div className="container mx-auto px-4 flex flex-col items-center text-center">
-            <div className="md:w-1/2 mb-0 relative z-10">
-              <p className="text-sm text-[#575757] mb-2">---J3---</p>
-              <h1 className="text-4xl font-bold text-[#343434] mb-4">
-                Jadi Jago JavaScript!
-              </h1>
-              <p className="text-xl text-[#343434] mb-6">
-                Belajar JavaScript dari awal sampe jago, dijamin gak bikin
-                pusing! Cocok buat kamu yang pengen jadi programmer pro.
-              </p>
-            </div>
-            <div className="md:w-1/2 relative z-10">
+        <section className="bg-gradient-to-b from-[#343434] to-[#343434] py-10">
+          <div className="container mx-auto flex max-w-screen-lg flex-col items-center gap-14 px-4 md:flex-row md:gap-0">
+            <div className="relative z-10 md:w-1/2">
               <Image
                 src="/ebook.png?v=1"
                 alt="JavaScript eBook Cover"
                 width={300}
                 height={300}
                 priority
-                className="mx-auto rounded-lg z-10"
+                className="z-10 mx-auto rounded-lg"
               />
+            </div>
+            <div className="relative z-10 mb-0 md:w-1/2">
+              <h1 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+                Jadi Jago JavaScript!
+              </h1>
+              <p className="mb-6 text-lg text-white">
+                Belajar JavaScript dari awal sampe jago, dijamin gak bikin
+                pusing! cocok buat yang pengen jadi programmer pro.
+              </p>
+              <Button
+                size="lg"
+                className="bg-yellow-300 text-[#343434] hover:bg-yellow-400"
+                onClick={() => {
+                  location.href = "https://dub.sh/buy-js-ebook";
+                }}
+              >
+                Beli Sekarang
+              </Button>
+              <div className="mt-2 flex items-center">
+                <Star fill="#fcd53f" className="h-6 w-6" />
+                <Star fill="#fcd53f" className="h-6 w-6" />
+                <Star fill="#fcd53f" className="h-6 w-6" />
+                <Star fill="#fcd53f" className="h-6 w-6" />
+                <StarHalf fill="#fcd53f" className="h-6 w-6" />
+                <p className="ml-2 text-sm text-gray-300">4.75</p>
+              </div>
+              <p className="mt-2 text-gray-300">60 reviews</p>
             </div>
           </div>
         </section>
 
         <Particles
           className="absolute inset-0"
-          quantity={200}
+          quantity={500}
           ease={80}
           color={color}
           refresh
         />
       </div>
-      <DotPattern
-        width={20}
-        height={20}
-        cx={1}
-        cy={1}
-        cr={1}
-        className={cn(
-          "[mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)] "
-        )}
-      />
     </>
   );
 }

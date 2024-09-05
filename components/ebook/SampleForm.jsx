@@ -21,7 +21,7 @@ export default function SampleForm() {
       form.current,
       {
         publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-      }
+      },
     );
   };
 
@@ -54,14 +54,14 @@ export default function SampleForm() {
     <>
       <ToastContainer />
 
-      <section className="py-16 bg-yellow-100">
-        <div className="container mx-auto px-4">
+      <section className="border py-16">
+        <div className="container mx-auto max-w-screen-lg px-4">
           <div className="flex flex-col items-center justify-between">
-            <div className="md:w-1/2">
-              <h2 className="text-2xl text-center font-semibold text-[#343434] mb-6">
-                Mau Coba Dulu? Gratis!
+            <div className="md:w-3/4">
+              <h2 className="mb-6 text-center text-2xl font-semibold text-[#343434]">
+                Mau coba dulu? gratis!
               </h2>
-              <p className="md:text-center text-[#343434] mb-6">
+              <p className="mb-6 text-[#343434] md:text-center">
                 Masih ragu? Tenang, kita kasih sample gratis buat kamu. Isi
                 email kamu di bawah, dan kita bakal kirim beberapa halaman ke
                 inbox kamu. Dijamin bikin kamu jadi penasaran!
@@ -69,7 +69,7 @@ export default function SampleForm() {
               <form
                 ref={form}
                 onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col gap-4 sm:flex-row"
               >
                 <Input
                   type="text"
@@ -77,6 +77,8 @@ export default function SampleForm() {
                   className="flex-grow"
                   value={name}
                   name="name"
+                  id="name"
+                  autoComplete="name"
                   onChange={(e) => setName(e.target.value)}
                 />
                 <Input
@@ -85,6 +87,8 @@ export default function SampleForm() {
                   type="email"
                   value={email}
                   name="email"
+                  id="email"
+                  autoComplete="email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <Button
