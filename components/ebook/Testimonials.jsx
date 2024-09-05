@@ -6,11 +6,11 @@ const ReviewCard = ({ name, role, content }) => {
   return (
     <Card className="max-w-80">
       <ShineBorder
-        className="w-full h-full"
+        className="h-full w-full"
         color={["#fef3c7", "#fcd34d", "#f59e0b"]}
       >
         <CardContent className="p-6">
-          <p className="text-[#343434] mb-4">&quot;{content}&quot;</p>
+          <p className="mb-4 text-[#343434]">&quot;{content}&quot;</p>
           <div className="font-semibold text-[#343434]">{name}</div>
           <div className="text-sm text-[#6d6d6d]/60">{role}</div>
         </CardContent>
@@ -49,9 +49,9 @@ export default function Testimonials() {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl text-center font-semibold text-[#343434] mb-10">
-          Apa Kata Mereka?
+      <div className="container mx-auto max-w-screen-lg px-4">
+        <h2 className="mb-10 text-center text-2xl font-semibold text-[#343434]">
+          Apa kata mereka?
         </h2>
         <Marquee pauseOnHover className="[--duration:60s]">
           <div className="flex flex-row gap-6">
