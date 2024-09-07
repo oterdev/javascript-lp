@@ -20,7 +20,7 @@ import { cn } from "@/lib/utils";
 export default function DiscountSection() {
   const { theme } = useTheme();
   const [timeLeft, setTimeLeft] = useState({
-    days: 2,
+    days: 1,
     hours: 0,
     minutes: 0,
     seconds: 0,
@@ -97,7 +97,7 @@ export default function DiscountSection() {
 
   return (
     <>
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden" id="discount">
         <MagicCard
           className="flex-col items-center justify-center border-0 bg-white"
           gradientColor={theme === "dark" ? "#262626" : "#fef08a"}
@@ -105,7 +105,7 @@ export default function DiscountSection() {
           <section className="py-16">
             <div className="container mx-auto max-w-screen-lg px-4 text-center text-[#343434]">
               <h2 className="mb-8 text-3xl font-semibold text-gray-800">
-                Penawaran special! 🎉
+                Dapetin harga spesial 🎉
               </h2>
               <div className="mb-6 flex justify-center">
                 <Image
@@ -129,8 +129,8 @@ export default function DiscountSection() {
                 </p>
               </div>
               <div className="mb-6">
-                <h3 className="mb-2 text-xl text-gray-600/80">
-                  Cepat! Penawaran berakhir:
+                <h3 className="mb-2 text-lg text-gray-600/80">
+                  Cepetan! diskonnya bentar lagi abis:
                 </h3>
                 <div className="flex justify-center gap-4">
                   {Object.entries(timeLeft).map(([unit, value]) => (
@@ -147,13 +147,13 @@ export default function DiscountSection() {
                   <TooltipTrigger>
                     <div className="relative inline-flex">
                       <div
-                        className="inline-flex h-11 items-center justify-center whitespace-nowrap rounded-md bg-yellow-300 px-8 text-sm font-medium text-[#343434] hover:bg-yellow-400"
+                        className="inline-flex h-11 items-center justify-center whitespace-nowrap rounded-md bg-yellow-300 px-8 text-sm font-semibold text-[#343434] hover:bg-yellow-400"
                         onClick={handleClick}
-                        id="dapet-diskon"
-                        data-umami-event="Dapet diskon"
+                        id="beli-rupiah"
+                        data-umami-event="Beli rupiah"
                         size="lg"
                       >
-                        Ambil Diskonnya
+                        Beli Rp 79.000
                       </div>
                       <div className="absolute right-0 top-0 -mr-1 -mt-1 flex h-3 w-3">
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#343434] opacity-75"></span>

@@ -6,18 +6,17 @@ export default function AudienceSection() {
     <section className="py-16">
       <div className="container mx-auto max-w-screen-lg px-4">
         <h2 className="mb-10 text-2xl font-semibold text-[#343434]">
-          Siapa sih yang cocok baca ini?
+          Ini buat siapa sih?
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <Card className="relative overflow-hidden hover:shadow-xl hover:shadow-yellow-200/50">
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-medium text-[#343434]">
-                Pemula tanpa latar belakang IT
+                Kamu yang baru mulai!
               </h3>
               <p className="text-[#343434]">
-                Buat kamu yang baru mulai coding dan pengen belajar JavaScript
-                dari awal. Tenang, kita mulai belajar dari yang paling dasar
-                kok!
+                Gak punya background IT? Gak masalah, ebook ini bakal ngajarin
+                dari basic.
               </p>
             </CardContent>
             <BorderBeam
@@ -30,11 +29,11 @@ export default function AudienceSection() {
           <Card className="relative overflow-hidden hover:shadow-xl hover:shadow-yellow-200/50">
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-medium text-[#343434]">
-                Mahasiswa IT
+                Mahasiswa IT!
               </h3>
               <p className="text-[#343434]">
-                Mau ningkatin skill buat tugas kuliah atau skripsi? Ebook ini
-                bakal bantu kamu jadi jago JavaScript!
+                Lagi stress sama skripsi codingan? Ebook ini bisa jadi
+                penyelamat kamu.
               </p>
             </CardContent>
             <BorderBeam size={250} duration={11} delay={5} />
@@ -42,11 +41,11 @@ export default function AudienceSection() {
           <Card className="relative overflow-hidden hover:shadow-xl hover:shadow-yellow-200/50">
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-medium text-[#343434]">
-                Fresh graduate
+                Fresh Graduate!
               </h3>
               <p className="text-[#343434]">
-                Kamu yang baru aja lulus kuliah dan mau upgrade kemampuan coding
-                supaya mendapatkan peluang lebih besar untuk dapetin kerja!
+                Siap-siap upgrade skill buat bikin CV kamu makin kinclong dan di
+                lirik HR.
               </p>
             </CardContent>
             <BorderBeam size={250} duration={12} delay={7} />
@@ -54,12 +53,11 @@ export default function AudienceSection() {
           <Card className="relative overflow-hidden hover:shadow-xl hover:shadow-yellow-200/50">
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-medium text-[#343434]">
-                Karyawan yang mau ganti karir
+                Karyawan yang mau switch career!
               </h3>
               <p className="text-[#343434]">
-                Buat yang udah kerja tapi pengen switch karir jadi programmer.
-                JavaScript bisa jadi langkah awal yang bagus buat jadi web
-                developer!
+                Mau jadi programmer tapi bingung mau mulai dari mana? Ebook ini
+                jawabannya.
               </p>
             </CardContent>
             <BorderBeam size={250} duration={13} delay={9} />

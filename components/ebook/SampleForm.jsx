@@ -9,20 +9,15 @@ import { Input } from "@/components/ui/input";
 
 import "react-toastify/dist/ReactToastify.css";
 
-export default function SampleForm() {
+export default function SampleForm({ serviceId, publicKey }) {
   const form = useRef(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
   const sendEmail = (template) => {
-    return emailjs.sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-      template,
-      form.current,
-      {
-        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-      },
-    );
+    return emailjs.sendForm(serviceId, template, form.current, {
+      publicKey: publicKey,
+    });
   };
 
   const handleSubmit = (e) => {
