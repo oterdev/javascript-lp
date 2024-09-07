@@ -8,23 +8,37 @@ export default function FeaturesList() {
 
   const features = [
     {
-      title: "Materi yang terus diupdate secara gratis via notion",
+      title: "Update gratis terus-menerus!",
+      description:
+        "Gak ada istilah ketinggalan jaman karena materinya selalu baru",
       image: "/notion.png",
     },
     {
-      title: "Latihan coding seru dan menantang untuk nguji skill kamu",
+      title: "Latihan coding yang real!",
+      description: "Supaya skill kamu makin tajam, biar gak cuma teori doang",
       image: "/challenge.png",
     },
     {
-      title: "Bikin proyek keren buat nambahin portfolio kamu",
+      title: "Proyek seru!",
+      description:
+        "Tunjukin hasilnya di portofolio kamu buat dapet kerjaan impian",
       image: "/case-study.png",
     },
     {
-      title: "Akses ke grup belajar eksklusif",
+      title: "Konsistensi belajar!",
+      description:
+        "Ada jadwal biar kamu tetep on track. Goodbye, malas-malasan!",
+      image: "/study-plan.png",
+    },
+    {
+      title: "Grup belajar seru!",
+      description:
+        "Gak perlu belajar sendirian, sini kumpul sesama pejuang coding",
       image: "/group.png",
     },
     {
-      title: "1x Free konsultasi via zoom",
+      title: "Free Zoom meet!",
+      description: "Bisa konsultasi langsung sekali buat yang masih bingung",
       image: "/zoom.png",
     },
   ];
@@ -48,7 +62,10 @@ export default function FeaturesList() {
                   width={1080}
                   height={1080}
                 />
-                <p>{feature.title}</p>
+                <div className="space-y-2">
+                  <p className="text-lg font-medium">{feature.title}</p>
+                  <p>{feature.description}</p>
+                </div>
               </CardContent>
               <BorderBeam
                 size={250}

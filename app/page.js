@@ -25,7 +25,10 @@ export default function LandingPage() {
         <HeroSection />
         <ProblemSection />
         <FeaturesList />
-        <SampleForm />
+        <SampleForm
+          serviceId={process.env.EMAILJS_SERVICE_ID}
+          publicKey={process.env.EMAILJS_PUBLIC_KEY}
+        />
         <AudienceSection />
         <Testimonials />
         <FinalCTA />

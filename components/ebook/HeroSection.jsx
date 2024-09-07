@@ -32,21 +32,22 @@ export default function HeroSection() {
               />
             </div>
             <div className="relative z-10 mb-0 md:w-1/2">
-              <h1 className="mb-4 text-3xl font-bold text-white md:text-4xl">
-                Jadi Jago JavaScript!
+              <h1 className="mb-4 text-3xl font-bold leading-[2.8rem] text-white md:text-4xl md:leading-[3rem]">
+                Mau Jago JavaScript? Yuk, Mulai dari Sini!
               </h1>
               <p className="mb-6 text-lg text-white">
-                Belajar JavaScript dari awal sampe jago, dijamin gak bikin
-                pusing! cocok buat yang pengen jadi programmer pro.
+                Belajar dari nol sampai paham total, tanpa drama coding yang
+                bikin pusing kepala. Cocok banget buat kamu yang mau jadi jago
+                JavaScript!
               </p>
               <Button
                 size="lg"
                 className="bg-yellow-300 text-[#343434] hover:bg-yellow-400"
                 onClick={() => {
-                  location.href = "https://dub.sh/buy-js-ebook";
+                  location.href = "#discount";
                 }}
               >
-                Beli Sekarang
+                Ambil Diskonnya
               </Button>
               <div className="mt-2 flex items-center">
                 <Star fill="#fcd53f" className="h-6 w-6" />

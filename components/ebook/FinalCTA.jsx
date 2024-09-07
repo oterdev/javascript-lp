@@ -26,7 +26,7 @@ export default function FinalCTA() {
                 location.href = "https://dub.sh/buy-js-ebook";
               }}
             >
-              Pesan Sekarang
+              Beli Sekarang
             </Button>
           </div>
         </div>
