@@ -28,10 +28,10 @@ export default function HeroSection() {
                 width={300}
                 height={300}
                 priority
-                className="z-10 mx-auto rounded-lg"
+                className="mx-auto rounded-lg"
               />
             </div>
-            <div className="relative z-10 mb-0 md:w-1/2">
+            <div className="relative mb-0 md:z-10 md:w-1/2">
               <h1 className="mb-4 text-3xl font-bold leading-[2.8rem] text-white md:text-4xl md:leading-[3rem]">
                 Mau Jago JavaScript? Yuk, Mulai dari Sini!
               </h1>
