@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/tooltip";
 
 import { cn } from "@/lib/utils";
-import * as fbq from "@/lib/fpixel";
 
 export default function DiscountSection() {
   const { theme } = useTheme();
@@ -89,7 +88,10 @@ export default function DiscountSection() {
     }, 250);
 
     // meta pixel
-    fbq.event("InitiateCheckout", { currency: "IDR", value: 79000 });
+    window.fbq("track", "InitiateCheckout", {
+      currency: "IDR",
+      value: 79000,
+    });
 
     // wait 3 seconds
     await new Promise((resolve) => setTimeout(resolve, 3 * 1000));

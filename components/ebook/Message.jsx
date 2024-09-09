@@ -3,8 +3,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-import * as fbq from "@/lib/fpixel";
-
 export default function Message() {
   return (
     <section className="fixed bottom-5 right-5 z-10 cursor-pointer md:bottom-10 md:right-10">
@@ -12,7 +10,7 @@ export default function Message() {
         variant="link"
         onClick={() => {
           // meta pixel
-          fbq.event("Contact");
+          window.fbq("track", "Contact");
 
           // open link
           location.href = "https://wa.link/lwhmyg";
