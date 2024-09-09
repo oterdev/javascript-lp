@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import * as fbq from "@/lib/fpixel";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -27,6 +28,9 @@ export default function SampleForm({ serviceId, publicKey }) {
       console.error("Please fill in both name and email fields.");
       return;
     }
+
+    // meta pixel
+    fbq.event("SubmitApplication");
 
     sendEmail("template_uywjia6")
       .then(() => {

@@ -3,6 +3,8 @@
 import { Button } from "@/components/ui/button";
 import Meteors from "@/components/magicui/meteors";
 
+import * as fbq from "@/lib/fpixel";
+
 export default function FinalCTA() {
   return (
     <div className="relative overflow-hidden">
@@ -23,6 +25,13 @@ export default function FinalCTA() {
               id="beli-sekarang"
               data-umami-event="Beli sekarang"
               onClick={() => {
+                // meta pixel
+                fbq.event("InitiateCheckout", {
+                  currency: "IDR",
+                  value: 79000,
+                });
+
+                // open link
                 location.href = "https://dub.sh/buy-js-ebook";
               }}
             >

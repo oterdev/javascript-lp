@@ -5,7 +5,6 @@ import Image from "next/image";
 import confetti from "canvas-confetti";
 import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/button";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { MagicCard } from "@/components/magicui/magic-card";
 import {
@@ -16,6 +15,7 @@ import {
 } from "@/components/ui/tooltip";
 
 import { cn } from "@/lib/utils";
+import * as fbq from "@/lib/fpixel";
 
 export default function DiscountSection() {
   const { theme } = useTheme();
@@ -87,6 +87,9 @@ export default function DiscountSection() {
         origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
       });
     }, 250);
+
+    // meta pixel
+    fbq.event("InitiateCheckout", { currency: "IDR", value: 79000 });
 
     // wait 3 seconds
     await new Promise((resolve) => setTimeout(resolve, 3 * 1000));
