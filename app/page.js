@@ -14,6 +14,7 @@ import DiscountSection from "@/components/ebook/DiscountSection";
 import Footer from "@/components/ebook/Footer";
 import Payment from "@/components/ebook/Payment";
 import Message from "@/components/ebook/Message";
+import ContactSection from "@/components/ebook/ContactSection";
 
 export default function LandingPage() {
   return (
@@ -60,6 +61,7 @@ export default function LandingPage() {
         <AuthorInfo />
         <DiscountSection />
         <Payment />
+        <ContactSection />
         <Footer />
         <Message />
       </div>
