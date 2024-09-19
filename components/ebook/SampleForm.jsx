@@ -3,6 +3,7 @@
 import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { LoaderCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,6 +14,7 @@ export default function SampleForm({ serviceId, publicKey }) {
   const form = useRef(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (template) => {
     return emailjs.sendForm(serviceId, template, form.current, {
@@ -22,6 +24,9 @@ export default function SampleForm({ serviceId, publicKey }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // aktifkan loading
+    setIsLoading(true);
 
     if (!name || !email) {
       console.error("Please fill in both name and email fields.");
@@ -40,6 +45,7 @@ export default function SampleForm({ serviceId, publicKey }) {
         console.log("FAILED...", error);
       })
       .finally(() => {
+        setIsLoading(false);
         setName("");
         setEmail("");
       });
@@ -90,8 +96,10 @@ export default function SampleForm({ serviceId, publicKey }) {
                   className="bg-[#343434] text-white hover:bg-[#202020]"
                   id="kirim-sample"
                   data-umami-event="Kirim sample"
+                  disabled={isLoading}
                 >
-                  Kirim Sample
+                  {isLoading && <LoaderCircle className="animate-spin" />}
+                  {!isLoading && <span>Kirim Sample</span>}
                 </Button>
               </form>
             </div>
