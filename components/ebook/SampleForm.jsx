@@ -2,6 +2,7 @@
 
 import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import { LoaderCircle } from "lucide-react";
 
@@ -11,6 +12,8 @@ import { Input } from "@/components/ui/input";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function SampleForm({ serviceId, publicKey }) {
+  const router = useRouter();
+
   const form = useRef(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -43,6 +46,9 @@ export default function SampleForm({ serviceId, publicKey }) {
       .then(() => {
         console.log("SUCCESS!");
         toast.success("Email terkirim!");
+        setTimeout(() => {
+          router.push("/sample-ebook");
+        }, 2000);
       })
       .catch((error) => {
         console.log("FAILED...", error);
