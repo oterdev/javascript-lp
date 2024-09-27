@@ -6,13 +6,13 @@ import { Textarea } from "@/components/ui/textarea";
 
 export default function ContactSection() {
   return (
-    <section className="py-16">
+    <section className="bg-[#f8fafc] py-16">
       <div className="container mx-auto max-w-screen-lg px-4">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div>
             <p className="mb-4 text-lg">
               Punya pertanyaan atau mau tau lebih lanjut tentang ebook ini?
-              Jangan ragu buat kontak kita ya!
+              Jangan ragu buat kontak saya ya!
             </p>
             <ul className="space-y-4">
               <li className="flex items-center">
@@ -21,7 +21,7 @@ export default function ContactSection() {
               </li>
               <li className="flex items-center">
                 <MapPin className="mr-2 h-5 w-5 text-yellow-500" />
-                <span>Jl. Jawa 3 No. 19, Pamulang</span>
+                <span>Jln. Jawa No. 19, Tangerang Selatan</span>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-yellow-500" />

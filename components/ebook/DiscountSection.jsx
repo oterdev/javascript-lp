@@ -126,11 +126,11 @@ export default function DiscountSection() {
                     Rp 199.000
                   </span>
                   <span className="text-2xl font-semibold text-red-600">
-                    Rp 79.000
+                    Rp 75.000
                   </span>
                 </p>
                 <p className="text-lg text-gray-600">
-                  Hemat 60% untuk waktu yang terbatas!
+                  Hemat 62% untuk waktu yang terbatas!
                 </p>
               </div>
               <div className="mb-6">
@@ -158,7 +158,7 @@ export default function DiscountSection() {
                         data-umami-event="Beli rupiah"
                         size="lg"
                       >
-                        Beli Rp 79.000
+                        Beli Rp 75.000
                       </div>
                       <div className="absolute right-0 top-0 -mr-1 -mt-1 flex h-3 w-3">
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#343434] opacity-75"></span>
