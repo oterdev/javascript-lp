@@ -8,16 +8,17 @@ export default function ProblemSection() {
           Apa kamu ngerasa...
         </h2>
         <div className="space-y-4 text-[#343434]">
-          <p>Sering bingung sama coding?</p>
-          <p>Stuck belajar JavaScript?</p>
+          <p>Bingung mau mulai dari mana?</p>
+          <p>Udah belajar lewat youtube tapi masih kaga ngerti?</p>
+          <p>Udah tau dasarnya tapi pas bikin web malah bingung!</p>
           <p>
             Kamu gak sendirian, banyak banget yang ngalamin hal sama. Dari
             tutorial yang rumit, istilah yang bikin kepala pening, sampai
             bingung mau mulai dari mana...
           </p>
           <p>
-            Rasanya kayak nyemplung ke lautan coding, tapi gak tau cara
-            berenang. Buka tutorial, malah makin bingung.
+            Rasanya kayak nyemplung ke lautan, tapi gak tau cara berenang. Baca
+            dokumentasi, malah makin bingung.
           </p>
           <p>Udah ngabisin waktu berjam-jam, tapi kok tetep gak paham?</p>
           <p>Frustasi, kan?</p>
