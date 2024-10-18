@@ -44,7 +44,7 @@ export default function HeroSection() {
                 size="lg"
                 className="bg-yellow-300 text-[#343434] hover:bg-yellow-400"
                 onClick={() => {
-                  location.href = "#discount";
+                  location.href = "https://dub.sh/buy-js-ebook";
                 }}
               >
                 Ambil Diskonnya
